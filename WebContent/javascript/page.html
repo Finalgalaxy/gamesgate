@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Page</title>
+</head>
+<body>
+<p>Ciao<br/></p>
+<p>
+<script type="text/javascript">
+	function parla_salvini()
+	{
+		var salvini =  prompt("Quale frase deve dire il re del nord?");
+		var text=null;
+		switch(salvini)
+		{
+			case "0": text="ruspa"; break;
+			case "1": text="lega"; break;
+			case "2": text="clandestini"; break;
+			default: text="berlusconi";
+		}
+		alert(text);
+	}
+</script>
+</p>
+<input type="button" value="Cosa dice salvini?" onclick="parla_salvini()"/>
+</body>
+</html>

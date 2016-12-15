@@ -1,0 +1,69 @@
+/* Phones fix */
+
+@media only screen
+and (min-device-width :320px)
+and (max-device-width :480px) {
+	header{
+		padding-bottom:20px;
+	}
+	nav#only_for_phones{
+		font-size:100px;
+		color:white;
+	}
+	nav#barra_accesso ul li{
+		font-size:30px;
+	}
+	nav#barra_menu ul li{
+		font-size:30px;
+	}
+	nav#barra_menu_principale{
+		height:75px;
+	}
+	nav#barra_menu_principale ul li{	
+		font-size:20px;
+		padding-right:30px;
+	}
+	nav#barra_menu_principale input[type="text"]{
+		width:60%;
+	}
+	nav#barra_menu_principale input[type="submit"]{
+		width:10%;
+	}
+	section#left_s{
+		font-size:35px;
+	}
+	div#content{
+		height:1190px;
+		font-size:40px;
+	}
+	div#profile{
+		float:none;
+	}
+	article.list{height:80px;margin-top:20px;}
+	article.list p{margin-top:-10px;}
+	article.list p.nome_videogame{width:450px;}
+	article.list p.prezzo{width:90px;}
+	article.list p.produttore{display:none;}
+	article.list p.bottoni{width:60px;}
+	article.banner img{
+		width:200px;
+		height:800px;
+	}
+	article.banner span{display:none;}
+	article.banner:hover{
+		animation:none; 
+	}
+	article.grid{float:left;}
+	article.grid p{display:none;}
+	article.single_videogame img, article.single_videogame div{
+		float:none;
+	}
+	article.single_videogame img{
+		width:100%;
+		height:600px;
+	}
+	span.hide_for_phone{
+		display:none;
+	}
+	
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX Call</title>
+<script type="text/javascript" src="ajax.js"></script>
+
+<script>
+function executeAjax(str_key){
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "./RicercaDinamicaServlet?str_key="+str_key, true);
+	xhr.setRequestHeader("connection", "close");
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState == 1){
+			document.getElementById("status").innerHTML = "Server connection";
+		}else if(xhr.readyState == 2){
+			document.getElementById("status").innerHTML = "Send request";
+		}else if(xhr.readyState == 3){
+			document.getElementById("status").innerHTML = "Receive response";
+		}else if(xhr.readyState == 4){
+			document.getElementById("status").innerHTML = "Request finished and response is ready";
+			if(xhr.status == 200 || xhr.status == 304){
+				var xml_document = xhr.responseXML;
+				var videogames = xml_document.getElementsByTagName("videogame");
+				document.getElementById("elenco_vid").innerHTML = "";
+				for(var i=0;i<videogames.length;i++){
+					document.getElementById("elenco_vid").innerHTML += videogames[i].getElementsByTagName("nome")[0].innerHTML + " | ";
+					document.getElementById("elenco_vid").innerHTML += videogames[i].getElementsByTagName("prezzo")[0].innerHTML + " euro<br/>";
+				}
+				//document.getElementById("elenco_vid").innerHTML = 
+			}else{
+				document.getElementById("status").innerHTML = "Response error "+ req.status + " " + req.statusText;
+			}
+		}
+	}
+	xhr.send(null);
+}
+</script>
+
+</head>
+<body>
+<div id="elenco_vid">
+</div>
+
+<input type="text" id="ricerca"/>
+<input type="button" onclick="executeAjax(document.getElementById('ricerca').value)" value="Esegui">
+
+<div id="status">
+	Status: null
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,150 @@
+article input{
+	width:175px;
+}
+
+article.search_list{
+	display:inline-block;
+	width:100%;
+	background-color:black;
+	color:white;
+	height:45px;
+	
+}
+
+article.search_list img{
+	float:left;
+}
+
+article.search_list div{
+	float:left;
+	width:100%;
+	display: inline-block;
+	word-break: break-word;
+}
+
+article.search_list div:hover{
+	background-color:blue;
+}
+	
+
+article.list{
+	display:inline-block;
+	width:95%;
+	background-color:#08457E;
+	height:45px;
+	margin-top:8px;
+	margin-left:10px;
+}
+
+article.list img{
+	float:left;
+	margin-right:10px;
+	width:120px;
+	height:45px;
+}
+
+article.list p{
+	float:left;
+}
+
+article.list div{
+	float:left;
+}
+
+article.list input{
+	float:left;
+}
+
+article.list input.admin_button{
+	display:block;margin-right:10px;margin-top:10px;
+}
+
+article.list p.admin_action{margin-left:-15px;width:30px;}
+article.list p.nome_videogame{width:300px;}
+article.list p.prezzo{width:200px;}
+article.list p.produttore{width:250px;}
+article.list div.bottoni{width:150px;}
+article.list div.bottone{width:150px;padding-top:10px;}
+
+article.grid{
+	float:left;
+	margin-right:10px;
+	text-align:center;
+}
+
+@keyframes grid_hover_slide{
+	from{border:0px solid; border-top:0px;border-color:white;}
+	to{border:5px solid; border-top:0px;border-color:white;}
+}
+
+article.grid:hover{
+	background-color:blue;
+	animation:0.2s grid_hover_slide forwards; 
+}
+
+article.grid img{
+	width:200px;
+	height:200px;
+}
+
+article.banner{
+	float:left;
+}
+
+article.banner a, article.banner span{
+	float:left;
+}
+
+article.banner img{
+	border:1px solid white;
+	width:100px;
+	height:400px;
+}
+
+article.banner span{
+	color:rgba(255,255,255,0.0);
+	width:0px;
+	height:400px;
+	border-style:solid;
+	border-color:white;
+	border-width:0px;
+}
+
+@keyframes banner_hover_slide{
+	0%{width:100px;}
+	100%{width:800px;}
+}
+
+@keyframes banner_hover_slide_span{
+	0%{color:rgba(255,255,255,0.0); border-width:0px;}
+	3%{color:rgba(255,255,255,0.0); width:0px; border-width:0px;}
+	50%{color:rgba(255,255,255,0.0);}
+  	90%{color:rgba(255,255,255,1.0);}
+  	100%{color:rgba(255,255,255,1.0); width:696px;border-width:1px;}
+}
+
+article.banner:hover{
+	animation:2s banner_hover_slide forwards; 
+}
+
+article.banner:hover span{
+	animation:2s banner_hover_slide_span forwards;
+}
+
+article.single_videogame img, article.single_videogame div{
+	float:left;
+}
+
+article.single_videogame img{
+	height: 400px;
+}
+
+article.single_videogame div div{
+	float:none;
+}
+
+article.single_producer img{
+	float:left;
+	width:100px;
+	height:400px;
+}
